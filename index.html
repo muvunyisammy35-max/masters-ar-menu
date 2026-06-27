@@ -33,8 +33,36 @@
       font-size: 16px;
       margin-top: 10px;
       cursor: pointer;
+      border: none;
+      border-radius: 8px;
     }
   </style>
+</head>
+
+<body>
+
+<h1>🍕 Master’s Pizza</h1>
+
+<p>Weekend Deal: Buy 2 Get 1 Free 🎉</p>
+
+<model-viewer
+  src="https://modelviewer.dev/shared-assets/models/DamagedHelmet.glb"
+  camera-controls
+  auto-rotate
+  ar
+  shadow-intensity="1">
+</model-viewer>
+
+<h2>Chicken Supreme</h2>
+
+<button onclick="document.querySelector('model-viewer').activateAR()">
+  View in AR 📱
+</button>
+
+<p>Tag your pizza squad 🍕❤️</p>
+
+</body>
+</html>  </style>
 </head>
 
 <body>
