@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Master's Pizza AR</title>
+  <title>Master's Pizza AR Menu</title>
 
+  <!-- Model Viewer (3D + AR engine) -->
   <script type="module"
     src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
   </script>
@@ -13,28 +14,84 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial;
-      text-align: center;
+      font-family: Arial, sans-serif;
       background: #111;
       color: white;
+      text-align: center;
     }
 
-    h1 {
-      margin-top: 20px;
+    header {
+      padding: 15px;
+      background: #d32f2f;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .promo {
+      margin: 10px;
+      font-size: 16px;
+      color: #ffd54f;
     }
 
     model-viewer {
       width: 100%;
-      height: 70vh;
+      height: 65vh;
+      background: #222;
+    }
+
+    h2 {
+      margin: 10px 0;
     }
 
     button {
-      padding: 12px 18px;
+      padding: 12px 20px;
       font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
+      margin: 10px;
       border: none;
       border-radius: 8px;
+      background: #ff9800;
+      color: white;
+    }
+
+    footer {
+      font-size: 14px;
+      margin: 15px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  🍕 Master’s Pizza AR Menu
+</header>
+
+<div class="promo">
+  🎉 Weekend Deal: Buy 2 Get 1 Free!
+</div>
+
+<!-- 3D MODEL AREA -->
+<model-viewer
+  src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+  camera-controls
+  auto-rotate
+  ar
+  shadow-intensity="1">
+</model-viewer>
+
+<h2>Chicken Supreme Pizza</h2>
+
+<button onclick="document.querySelector('model-viewer').activateAR()">
+  View in AR 📱
+</button>
+
+<footer>
+  Tag your pizza squad 🍕❤️
+</footer>
+
+</body>
+</html>      border-radius: 8px;
     }
   </style>
 </head>
